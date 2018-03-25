@@ -2,10 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {
-  MatButtonModule,
-  MatIconModule
-} from '@angular/material';
+import { MaterialModule } from './shared/material/material.module';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +11,6 @@ import { PopularComponent } from './pages/popular/popular.component';
 
 /** TODO:
   * 1. Break the router into it's own module
-  * 2. Break the Material Modules out into it's own module
   **/
 
 import { ContactsService } from './contacts.service';
@@ -35,8 +31,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MatButtonModule,
-    MatIconModule
+    MaterialModule
   ],
   providers: [ContactsService],
   bootstrap: [AppComponent]
