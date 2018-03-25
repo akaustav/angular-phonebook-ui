@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { APP_TITLE } from '../services/page-title.service';
+import { APP_TITLE } from '../../services/page-title.service';
 
 @Component({
   selector: 'app-navbar',
