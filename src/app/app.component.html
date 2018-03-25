@@ -1,3 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>Welcome to {{ title }}!</h1>
-<router-outlet></router-outlet>
+<header class="mat-elevation-z6">
+  <nav class="pb-nav">
+    <a mat-button routerLink="/">
+      <mat-icon>local_phone</mat-icon>
+      <span>{{ title }}</span>
+    </a>
+    <a mat-button routerLink="/popular">Popular</a>
+    <a mat-button routerLink="/contacts">Contacts</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
