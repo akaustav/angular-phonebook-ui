@@ -46,6 +46,10 @@
 import 'core-js/es7/reflect';
 
 
+/** Import HammerJS if you need Gesture support - especially with @angular/material **/
+import 'hammerjs';
+
+
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.
  * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
