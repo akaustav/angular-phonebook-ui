@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
+export const APP_TITLE = 'Phonebook';
+
 @Injectable()
 export class PageTitleService {
   private _title = '';
@@ -16,7 +18,7 @@ export class PageTitleService {
       title = `${title} | `;
     }
 
-    this.bodyTitle.setTitle(`${title}Phonebook`);
+    this.bodyTitle.setTitle(`${title}${APP_TITLE}`);
   }
 
   constructor(private bodyTitle: Title) {}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { APP_TITLE } from '../services/page-title.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  public title = 'Phonebook';
+  public title = APP_TITLE;
 }
