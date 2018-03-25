@@ -9,7 +9,7 @@ import {
 
 
 import { AppComponent } from './app.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PopularComponent } from './popular/popular.component';
 
 /** TODO:
