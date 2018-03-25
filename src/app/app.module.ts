@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 // Services
+import { PageTitleService } from './shared/services/page-title.service';
 import { ContactsService } from './contacts.service';
 
 // Components
@@ -28,7 +29,10 @@ import { PopularComponent } from './pages/popular/popular.component';
     MaterialModule,
     AppRoutingModule
   ],
-  providers: [ContactsService],
+  providers: [
+    PageTitleService,
+    ContactsService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
