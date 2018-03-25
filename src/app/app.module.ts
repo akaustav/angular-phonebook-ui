@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Services
 import { PageTitleService } from './shared/services/page-title.service';
-import { ContactsService } from './contacts.service';
+import { ContactsService } from './shared/services/contacts.service';
 
 // Components
 import { AppComponent } from './app.component';
