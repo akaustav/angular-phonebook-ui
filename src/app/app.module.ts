@@ -12,6 +12,11 @@ import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { PopularComponent } from './popular/popular.component';
 
+/** TODO:
+  * 1. Break the router into it's own module
+  * 2. Break the Material Modules out into it's own module
+  **/
+
 import { ContactsService } from './contacts.service';
 
 const routes: Routes = [
