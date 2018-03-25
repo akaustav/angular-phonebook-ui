@@ -10,7 +10,7 @@ import {
 
 import { AppComponent } from './app.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
-import { PopularComponent } from './popular/popular.component';
+import { PopularComponent } from './pages/popular/popular.component';
 
 /** TODO:
   * 1. Break the router into it's own module
