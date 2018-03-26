@@ -21,4 +21,8 @@ export class ContactsComponent implements OnInit {
     this.contacts = this.contactsService.getContacts();
   }
 
+  add() {
+    this.contacts.push({ name: 'Test User', number: '888-888-8888', popular: false });
+  }
+
 }
