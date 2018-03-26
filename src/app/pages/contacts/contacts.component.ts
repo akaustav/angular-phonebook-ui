@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { AddContactComponent } from '../../shared/components/add-contact/add-contact.component';
 import { PageTitleService } from '../../shared/services/page-title.service';
 import { IContact, ContactsService } from '../../shared/services/contacts.service';
 
@@ -13,7 +15,8 @@ export class ContactsComponent implements OnInit {
 
   constructor(
     private pageTitle: PageTitleService,
-    private contactsService: ContactsService
+    private contactsService: ContactsService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -22,7 +25,12 @@ export class ContactsComponent implements OnInit {
   }
 
   add() {
-    this.contacts.push({ name: 'Test User', number: '888-888-8888', popular: false });
+    const dialogRef = this.dialog.open(AddContactComponent);
+    dialogRef.afterClosed().subscribe((contact: IContact) => {
+      if (contact) {
+        this.contacts.push(contact);
+      }
+    });
   }
 
 }

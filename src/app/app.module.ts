@@ -35,6 +35,7 @@ import { PopularComponent } from './pages/popular/popular.component';
     PageTitleService,
     ContactsService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddContactComponent]
 })
 export class AppModule {}

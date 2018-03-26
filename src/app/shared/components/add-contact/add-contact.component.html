@@ -1,3 +1,18 @@
-<p>
-  add-contact works!
-</p>
+<h1 mat-dialog-title>Add Contact</h1>
+
+<mat-form-field>
+  <input matInput #contactName placeholder="Contact Name">
+</mat-form-field>
+<mat-form-field>
+  <input matInput #contactNumber placeholder="Contact Number">
+</mat-form-field>
+<mat-slide-toggle #contactPopular>Popular</mat-slide-toggle>
+
+<button mat-raised-button color="primary"
+  (click)="dialogRef.close({
+    name: contactName.value,
+    number: contactNumber.value,
+    popular: contactPopular.checked
+  })">Save
+</button>
+<button mat-raised-button (click)="dialogRef.close()">Cancel</button>
