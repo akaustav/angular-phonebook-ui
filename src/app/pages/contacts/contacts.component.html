@@ -1,3 +1,10 @@
-<p>
-  contacts works!
-</p>
+<mat-nav-list>
+  <mat-list-item *ngFor="let contact of contacts">
+    <h4 mat-line>{{ contact.name }}</h4>
+    <p mat-line>{{ contact.number }}</p>
+  </mat-list-item>
+</mat-nav-list>
+
+<button mat-mini-fab>
+  <mat-icon>add</mat-icon>
+</button>
