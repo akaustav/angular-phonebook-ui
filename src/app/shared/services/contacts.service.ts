@@ -9,15 +9,21 @@ export interface IContact {
 @Injectable()
 export class ContactsService {
 
-  getContacts(): IContact[] {
-    const contacts: IContact[] = [
-      { name: 'Ameet', number: '999-999-9999', popular: true },
-      { name: 'John', number: '777-777-7777', popular: false },
-      { name: 'Mary', number: '111-111-1111', popular: true },
-      { name: 'Janez', number: '444-444-4444', popular: false }
-    ];
+  private readonly contacts: IContact[] = [
+    { name: 'Ameet', number: '999-999-9999', popular: true },
+    { name: 'John', number: '777-777-7777', popular: false },
+    { name: 'Sanghamitra', number: '111-111-1111', popular: true },
+    { name: 'Janez', number: '444-444-4444', popular: false }
+  ];
 
-    return contacts;
+  getContacts(): IContact[] {
+    return this.contacts;
+  }
+
+  getPopularContacts(): IContact[] {
+    return this.contacts.filter((contact: IContact) => {
+      return (contact.popular === true);
+    });
   }
 
 }

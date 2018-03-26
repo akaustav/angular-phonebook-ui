@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageTitleService } from '../../shared/services/page-title.service';
+import { IContact, ContactsService } from '../../shared/services/contacts.service';
 
 @Component({
   selector: 'app-contacts',
@@ -8,10 +9,16 @@ import { PageTitleService } from '../../shared/services/page-title.service';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor(public pageTitle: PageTitleService) {}
+  contacts: IContact[];
+
+  constructor(
+    private pageTitle: PageTitleService,
+    private contactsService: ContactsService
+  ) {}
 
   ngOnInit(): void {
     this.pageTitle.title = 'Contacts';
+    this.contacts = this.contactsService.getContacts();
   }
 
 }

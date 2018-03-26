@@ -18,11 +18,7 @@ export class PopularComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageTitle.title = 'Popular';
-    const fetchedContacts: IContact[] = this.contactsService.getContacts();
-
-    this.contacts = fetchedContacts.filter((contact: IContact) => {
-      return (contact.popular === true);
-    });
+    this.contacts = this.contactsService.getPopularContacts();
   }
 
 }
