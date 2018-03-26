@@ -8,6 +8,8 @@ header {
 }
 
 main {
+  min-height: 2120px;
+  margin: 10px;
   position: relative;
   top: 50px;
 }
