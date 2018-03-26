@@ -4,6 +4,9 @@
       <h4 mat-line>{{ contact.name }}</h4>
       <p mat-line>{{ contact.number }}</p>
       <mat-icon *ngIf="contact.popular">star</mat-icon>
+      <button mat-icon-button (click)="delete(contact)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-list-item>
   </mat-nav-list>
 </mat-card>
