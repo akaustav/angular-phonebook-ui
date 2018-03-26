@@ -12,6 +12,7 @@ import { ContactsService } from './shared/services/contacts.service';
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { AddContactComponent } from './shared/components/add-contact/add-contact.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PopularComponent } from './pages/popular/popular.component';
 
@@ -20,6 +21,7 @@ import { PopularComponent } from './pages/popular/popular.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    AddContactComponent,
     ContactsComponent,
     PopularComponent
   ],
