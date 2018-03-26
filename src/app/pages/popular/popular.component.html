@@ -1,3 +1,5 @@
-<p>
-  popular works!
-</p>
+<h3>Popular Contacts</h3>
+
+<mat-card *ngFor="let contact of contacts">
+  <h4>{{ contact.name }}</h4>
+</mat-card>

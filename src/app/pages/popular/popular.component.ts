@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageTitleService } from '../../shared/services/page-title.service';
+import { IContact, ContactsService } from '../../shared/services/contacts.service';
 
 @Component({
   selector: 'app-popular',
@@ -8,10 +9,20 @@ import { PageTitleService } from '../../shared/services/page-title.service';
 })
 export class PopularComponent implements OnInit {
 
-  constructor(public pageTitle: PageTitleService) {}
+  contacts: IContact[];
+
+  constructor(
+    private pageTitle: PageTitleService,
+    private contactsService: ContactsService
+  ) {}
 
   ngOnInit(): void {
     this.pageTitle.title = 'Popular';
+    const fetchedContacts: IContact[] = this.contactsService.getContacts();
+
+    this.contacts = fetchedContacts.filter((contact: IContact) => {
+      return (contact.popular === true);
+    });
   }
 
 }
