@@ -1,5 +1,5 @@
-button[mat-mini-fab] {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+button[mat-fab] {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
 }
