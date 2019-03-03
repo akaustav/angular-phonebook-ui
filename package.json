@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host=192.168.86.79",
+    "start": "ng serve",
+    "start:ameet": "ng serve --host=192.168.86.115",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
