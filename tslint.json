@@ -1,8 +1,7 @@
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer"
-  ],
+  "extends": "tslint:recommended",
   "rules": {
+    "array-type": false,
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -12,7 +11,7 @@
     ],
     "curly": true,
     "deprecation": {
-      "severity": "warn"
+      "severity": "warning"
     },
     "eofline": true,
     "forin": true,
@@ -138,5 +137,8 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true
-  }
+  },
+  "rulesDirectory": [
+    "codelyzer"
+  ]
 }
